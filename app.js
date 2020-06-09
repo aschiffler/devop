@@ -3,7 +3,7 @@ var app = express();
 
 app.get('/', function (req, res) {
     if (req.query.ip == undefined || req.query.ip == '') {
-        res.send('Hello World!');
+        res.send('Hello World! ' + process.env.APPVALUE);
     } else {
         if (ValidateIPaddress(req.query.ip)) {
             res.send('Hello World! with ' + req.query.ip);
