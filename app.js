@@ -13,11 +13,11 @@ app.get('/', function (req, res) {
     }
 });
 
-app.listen(4000, function () {
+app.listen(process.env.PORT, function () {
     if (typeof (PhusionPassenger) !== 'undefined') {
         console.log('App running inside Passenger.');
     } else {
-        console.log('App running on port 4000');
+        console.log('App running on port ' + process.env.PORT);
     }
 });
 
