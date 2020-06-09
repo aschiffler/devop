@@ -38,26 +38,6 @@ var app1 = new Vue({
     methods: {
         sendnodered: function(data) {
             uibuilder.send( {'payload': data});
-        }, 
-        loadmodel: function(event) {
-            this.startMsg = "Please wait Model loading...";
-            this.stateClassification = false;
-            this.stateModel = false;
-            this.inputChkBox = false;
-            classifier = ml5.imageClassifier(this.inputText, video, modelReady);
-        },
-        setstate: function(event) {
-            if (this.stateModel){
-                if (!this.stateClassification){
-                    this.stateClassification = true;
-                    classifier.classify(gotResult);
-                    this.startMsg = "Camera started, Model loaded, Classification runs"
-                } else {
-                    this.stateClassification = false;
-                    this.startMsg = "Camera started, Model loaded, Classification stopped"
-                }
-            }
-            //console.log(this.stateClassification + " " + this.stateModel)
         },
    }, // --- End of methods --- //
 

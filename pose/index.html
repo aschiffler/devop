@@ -32,15 +32,9 @@
                 <p>
                     State Msg: <b>{{startMsg}}</b>
                 </p>
-                <p>Enter a URL pointing to the <code>model.json</code> or type 'MobileNet'</p>
-                <p>
-                    <b-form-input v-model="inputText" type="text"></b-form-input><br>
-                    <b-button id="btn_loadmodel" pill variant="primary" v-on:click="loadmodel">Load Model / Update</b-button><br><br>
-                    <b-button id="btn_setstate" pill variant="primary" v-on:click="setstate">Classification</b-button> Running: <b>{{stateClassification}}</b>
-                </p>
                 <p>Result: <b>{{resultText}}</b></p>
                 <p>
-                    <b-form-checkbox v-model="inputChkBox" v-on:click="setstate">Send result to node-red as <code>msg.payload</code></b-form-checkbox><br>
+                    <b-form-checkbox v-model="inputChkBox">Send result to node-red as <code>msg.payload</code></b-form-checkbox><br>
                 </p>
             </b-form>
         </b-container>
