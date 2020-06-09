@@ -94,7 +94,7 @@ module.exports = {
     adminAuth: {
         type: "credentials",
         users: [{
-            username: process.env.USERNAME || "user",
+            username: process.env.NODEREDUSER || "user",
             password: process.env.SECRET || "$2a$08$pMXw7YEJ2.rGCvpQ6Tzc8.2Losc2OwPK0ajvGJHMuCctWq2pzkQ.m",
             permissions: "*"
         }]
