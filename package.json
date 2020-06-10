@@ -7,7 +7,6 @@
     "express": "^4.17.1",
     "node-red": "^1.0.6",
     "node-red-contrib-opcua": "^0.2.63",
-    "node-red-contrib-teachable-machine": "^1.1.4",
     "node-red-contrib-uibuilder": "^2.0.7",
     "node-red-dashboard": "^2.22.1"
   },
