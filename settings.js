@@ -1,9 +1,7 @@
 module.exports = {
-    httpAdminRoot:"/",
-    httpNodeRoot: "/",
     ui: { path: "ui" },
     
-    userDir:"node-red/",
+    userDir:"./",
     // the tcp port that the Node-RED web server is listening on
     uiPort: process.env.PORT || 8000,
 
@@ -36,7 +34,7 @@ module.exports = {
     //debugUseColors: true,
 
     // The file containing the flows. If not set, it defaults to flows_<hostname>.json
-    flowFile: 'flows.json',
+    flowFile: './flows.json',
 
     // To enabled pretty-printing of the flow within the flow file, set the following
     //  property to true:
@@ -62,14 +60,14 @@ module.exports = {
     // By default, the Node-RED UI is available at http://localhost:1880/
     // The following property can be used to specifiy a different root path.
     // If set to false, this is disabled.
-    //httpAdminRoot: '/admin',
-
+    httpAdminRoot: "/" + process.env.NODEREDUSER + "/",
+//      httpAdminRoot: "/",	
     // Some nodes, such as HTTP In, can be used to listen for incoming http requests.
     // By default, these are served relative to '/'. The following property
     // can be used to specifiy a different root path. If set to false, this is
     // disabled.
-    //httpNodeRoot: '/red-nodes',
-
+    httpNodeRoot:  "/" + process.env.NODEREDUSER + "/",
+    //  httpNodeRoot: "/",
     // The following property can be used in place of 'httpAdminRoot' and 'httpNodeRoot',
     // to apply the same root to both parts.
     //httpRoot: '/red',
@@ -91,14 +89,14 @@ module.exports = {
     // -----------------
     // To password protect the Node-RED editor and admin API, the following
     // property can be used. See http://nodered.org/docs/security.html for details.
-    adminAuth: {
-        type: "credentials",
-        users: [{
-            username: process.env.NODEREDUSER || "user",
-            password: process.env.SECRET || "$2a$08$pMXw7YEJ2.rGCvpQ6Tzc8.2Losc2OwPK0ajvGJHMuCctWq2pzkQ.m",
-            permissions: "*"
-        }]
-    },
+    //adminAuth: {
+      //  type: "credentials",
+      //  users: [{
+      //      username: process.env.NODEREDUSER || "user",
+      //      password: process.env.SECRET || "$2a$08$pMXw7YEJ2.rGCvpQ6Tzc8.2Losc2OwPK0ajvGJHMuCctWq2pzkQ.m",
+      //      permissions: "*"
+      //  }]
+   // },
 
     // To password protect the node-defined HTTP endpoints (httpNodeRoot), or
     // the static content (httpStatic), the following properties can be used.

@@ -5,10 +5,12 @@
   "main": "app.js",
   "dependencies": {
     "express": "^4.17.1",
-    "node-red": "^1.0.6",
+    "jwt-simple": "^0.5.6",
+    "node-red": "^1.1.0",
     "node-red-contrib-mail-actions": "^1.0.1",
     "node-red-contrib-opcua": "^0.2.63",
-    "node-red-contrib-uibuilder": "^2.0.7",
+    "node-red-contrib-teachable-machine": "^1.1.4",
+    "node-red-contrib-uibuilder": "^2.0.8",
     "node-red-dashboard": "^2.22.1"
   },
   "devDependencies": {},
@@ -28,6 +30,6 @@
   "homepage": "https://github.com/aschiffler/devop#readme",
   "engines": {
     "node": ">=12.0.0",
-    "npm": "^6.13.4"
+    "npm": ">=6.13.4"
   }
 }
