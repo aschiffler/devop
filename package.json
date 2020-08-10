@@ -4,14 +4,20 @@
   "description": "This is a playground for testing the CD and CI",
   "main": "app.js",
   "dependencies": {
+    "@tensorflow/tfjs-node": "^2.0.1",
     "express": "^4.17.1",
     "jwt-simple": "^0.5.6",
     "node-red": "^1.1.0",
+    "node-red-contrib-browser-utils": "0.0.9",
+    "node-red-contrib-image-output": "^0.6.3",
     "node-red-contrib-mail-actions": "^1.0.1",
+    "node-red-contrib-node-webcam": "0.0.3",
     "node-red-contrib-opcua": "^0.2.63",
     "node-red-contrib-teachable-machine": "^1.1.4",
     "node-red-contrib-uibuilder": "^2.0.8",
-    "node-red-dashboard": "^2.22.1"
+    "node-red-contrib-webcam": "0.0.1",
+    "node-red-dashboard": "^2.22.1",
+    "webcam": "^3.2.1"
   },
   "devDependencies": {},
   "scripts": {
